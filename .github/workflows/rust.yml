@@ -32,7 +32,7 @@ jobs:
           strip: true
 
       - name: Publish artifacts and release
-        uses: houseabsolute/actions-rust-release@v0
+        uses: houseabsolute/actions-rust-release@614e479169873f012c973d243d5a5f80006b7438
         with:
           executable-name: audiometa
           target: ${{ matrix.platform.target }}
