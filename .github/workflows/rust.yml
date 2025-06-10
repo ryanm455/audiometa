@@ -1,8 +1,11 @@
+name: Rust Compile Release
 on:
   push:
     tags:
       - 'v*'
-
+permissions:
+  contents: write
+  actions: write
 jobs:
   release:
     runs-on: ${{ matrix.platform.os }}
