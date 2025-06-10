@@ -1,4 +1,5 @@
 # Audio Meta
+A simple to use command line tool to read audio files' metadata.
 This was made very quickly so probably has many bugs.
 
 ## Usage
@@ -12,6 +13,10 @@ ls | audiometa
 Supports directories:
 ```
 audiometa . -r
+```
+Example of possible complex usage:
+```
+audiometa . -r | grep -E "(file:|avg_bitrate_kbps:)" | paste - - | sort -k4 -n
 ```
 
 ## Command Line Options
